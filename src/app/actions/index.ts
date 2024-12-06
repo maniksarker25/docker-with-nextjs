@@ -8,6 +8,7 @@ interface CreateUserResponse {
 }
 
 export async function createUser(prevState: any, formData: FormData): Promise<CreateUserResponse> {
+  console.log("nice to meet you")
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   const image = formData.get("image") as File | null;
